@@ -45,12 +45,18 @@ The site is also equiped with an extensive search engine able to perform simple 
 
 <details>
   <summary><b>Table of contents</b></summary>
-  
-  <br />
-  
-  <a href="https://github.com/rently-io/.github/tree/main/profile#system-overview">System overview</a>
+    
+  <h3><a href="https://github.com/rently-io/.github/tree/main/profile#system-overview">System overview</a></h3>
   <ul>
     <li>
+      <a href="https://github.com/rently-io/.github/blob/main/profile/README.md#a-full-stack-project">
+        A full stack project
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/rently-io/.github/blob/main/profile/README.md#c2-model">
+        C2 model
+      </a>
     </li>
   </ul>
 </details>
