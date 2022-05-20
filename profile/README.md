@@ -35,7 +35,7 @@
 
 This project consists of 5 micro-services. Together with a frontend, they make Rently a simple yet complete platform on which users can quickly create and post items for rent to the public. The whole process seriously takes a few seconds! 
 
-Registration does not require the you to create a dedicated account. Simply login with your favorite social provider instead, the rest is taken careof in the backend. In fact, the site does not handle any sensitive user data such as passwords.
+Registration does not require users to create a dedicated account; simply login with your favorite social provider instead. The rest is taken care of in the backend. In fact, the site does not handle any sensitive user data such as passwords.
 
 Additionally, the site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches thru the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and its [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) search along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
 
