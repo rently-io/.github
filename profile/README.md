@@ -43,10 +43,29 @@ The site is also equiped with an extensive search engine able to perform simple 
 
 <br />
 
+<details>
+  <summary><b>Table of contents</b></summary>
+  
+  <br />
+  
+  <a href="https://github.com/rently-io/.github/tree/main/profile#system-overview">System overview</a>
+  <ul>
+    <li>
+    </li>
+  </ul>
+</details>
+
 # System overview
 
-The frontend was built with NextJS in Typescript while the backend services, with Java's Spring Boot. [reasons]
+### A full stack project
 
+The frontend was built in Typescript with the NextJS framework as it offers a number of adantages over ReactJS, the framework on which NextJS was built upon. Not only can it server requests at greater speeds, but also has support for CSS modules, making frontend component development much easier to style. 
+
+More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. More on JWTs [here]().
+
+The backend uses Spring Boot
+
+### C2 model
 ![C2 model](https://i.imgur.com/CqQbDQA.png)
 
 ![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
@@ -55,3 +74,7 @@ The frontend was built with NextJS in Typescript while the backend services, wit
 ![search-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=search-service&include_all_commits=true&show_owner=true)  
 ![mailer-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true)  
 ![image-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true)  
+
+# OAuth implementation 
+
+This is how I implemented OAuth and manage user data.
