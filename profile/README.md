@@ -47,7 +47,7 @@ The site is also equiped with an extensive search engine able to perform simple 
 
 The frontend was built with NextJS in Typescript while the backend services, with Java's Spring Boot. [reasons]
 
-![C2 model](https://i.imgur.com/c3vhRAU.png)
+![C2 model](https://i.imgur.com/CqQbDQA.png)
 
 ![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
 ![user-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true)  
