@@ -37,13 +37,17 @@ This project consists of 5 micro-services. Together with a frontend, they make R
 
 Registration does not require the you to create a dedicated account. Simply login with your favorite social provider instead, the rest is taken careof in the backend. In fact, the site does not handle any sensitive user data such as passwords.
 
-Additionally, the site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches thru the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and its [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) search.
+Additionally, the site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches thru the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and its [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) search along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up!
 
 <br />
 
 # System overview
+
+The frontend was built with NextJS in Typescript while the backend services, with Java's Spring Boot. [reasons]
+
+![C2 model](https://i.imgur.com/6QO88CS.png)
 
 ![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
 ![user-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true)  
