@@ -40,7 +40,9 @@ Registration does not require users to create a dedicated account; simply login 
 The site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches through the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) endpoints along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up!
-> 
+
+<br />
+
 <details>
   <summary><b>Table of contents</b></summary>
     
