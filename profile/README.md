@@ -1,10 +1,3 @@
-![User Service CI](https://github.com/rently-io/user-service/actions/workflows/ci.yml/badge.svg)
-![Listing Service CI](https://github.com/rently-io/listing-service/actions/workflows/ci.yml/badge.svg)
-![Search Service CI](https://github.com/rently-io/search-service/actions/workflows/ci.yml/badge.svg)
-![Image Service CI](https://github.com/rently-io/image-service/actions/workflows/ci.yml/badge.svg)
-![Mailer Service CI](https://github.com/rently-io/mailer-service/actions/workflows/ci.yml/badge.svg)
-
-<br />
 <br />
 
 <p align="center"> 
@@ -14,11 +7,43 @@
 </p>
 
 <h4 align="center">All you can rent on <a href="https://rently-io.herokuapp.com/">Rently</a>!</h4>
-<p align="center">Rently is a second year university project that <a href="https://github.com/greffgreff">I developed</a> over the course of a few months. I have no genuine intention of deploying this application for real-life use. 🌈 Feel free to contribute to the project!</p>
+<p align="center">Rently is a second year university full stack project that <a href="https://github.com/greffgreff">I developed</a> over the course of a few months. I have no genuine intention of deploying this application for real-life use. 🌈 Feel free to contribute to the project!</p>
+
+<br />
+
+<p align="center" style="align: center;">
+  <a href="https://github.com/rently-io/user-service/" >
+    <img src="https://github.com/rently-io/user-service/actions/workflows/ci.yml/badge.svg" />
+  </a>
+  <a href="https://github.com/rently-io/listing-service/" >
+    <img src="https://github.com/rently-io/listing-service/actions/workflows/ci.yml/badge.svg" />
+  </a>
+  <a href="https://github.com/rently-io/search-service/" >
+    <img src="https://github.com/rently-io/search-service/actions/workflows/ci.yml/badge.svg" />
+  </a>
+  <a href="https://github.com/rently-io/image-service/" >
+    <img src="https://github.com/rently-io/image-service/actions/workflows/ci.yml/badge.svg" />
+  </a>
+  <a href="https://github.com/mailer-io/image-service/" >
+    <img src="https://github.com/rently-io/mailer-service/actions/workflows/ci.yml/badge.svg" />
+  </a>
+</p>
+
+<br />
 
 # About
 
-> ⚠️ Please note that the services are currently deployed on a freemium tier of Heroku and need a few seconds to warm-up!
+This project consists of 5 micro-services. Together with a frontend, they make Rently a simple yet complete platform on which users can quickly create and post an item for rent to the public. The whole process seriously takes a few seconds! 
+
+Registration does not require the you to create a dedicated account. Simply login with your favorite social provider instead, the rest is taken careof in the backend. In fact, the site does not handle any sensitive user data such as passwords.
+
+Additionally, the site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches thru the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and its [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) search.
+
+> ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up!
+
+<br />
+
+# System overview
 
 ![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
 ![user-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true)  
