@@ -33,7 +33,7 @@
 
 # About
 
-This project consists of 5 micro-services. Together with a frontend, they make Rently a simple yet complete platform on which users can quickly create and post an item for rent to the public. The whole process seriously takes a few seconds! 
+This project consists of 5 micro-services. Together with a frontend, they make Rently a simple yet complete platform on which users can quickly create and post items for rent to the public. The whole process seriously takes a few seconds! 
 
 Registration does not require the you to create a dedicated account. Simply login with your favorite social provider instead, the rest is taken careof in the backend. In fact, the site does not handle any sensitive user data such as passwords.
 
