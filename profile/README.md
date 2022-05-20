@@ -37,7 +37,7 @@ This project consists of 5 micro-services. Together with a frontend, they make R
 
 Registration does not require users to create a dedicated account; simply login with your favorite social provider instead. The rest is taken care of in the backend. In fact, the site does not handle any sensitive user data such as passwords.
 
-The site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches through the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and its [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) search along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
+The site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches through the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) endpoints along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up!
 
