@@ -150,14 +150,14 @@ Below is are brief descriptions or particularities about each repository. For mo
 ### Frontend
 As mentioned ealier, the frontend uses NextJS. To facilitate the implementation of sessions with JWTs, the NextAuth library was used. 
 
-<a href="https://github.com/mailer-io/rently/" >
+<a href="https://github.com/rently-io/rently/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true" />
 </a>
 
 ### User service
 SQL database. Uses Java's JPA ORM for MySQL. V1 vs V2
 
-<a href="https://github.com/mailer-io/user-service/" >
+<a href="https://github.com/rently-io/user-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true" /> 
 </a>
 
@@ -165,14 +165,14 @@ SQL database. Uses Java's JPA ORM for MySQL. V1 vs V2
 ### Listing service
 Document-based database. Uses Java's JPA ORM for MongoDB
 
-<a href="https://github.com/mailer-io/listing-service/" >
+<a href="https://github.com/rently-io/listing-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=listing-service&include_all_commits=true&show_owner=true" /> 
 </a>
 
 ### Search service
 Uses MongoDB's Text and Geo Indexes. Geos are computed using TomTom API
 
-<a href="https://github.com/mailer-io/search-service/" >
+<a href="https://github.com/rently-io/search-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=search-service&include_all_commits=true&show_owner=true" />
 </a>
 
@@ -181,7 +181,7 @@ A dedicated solution that is capable of sending various emails. The mailer uses 
 
 Pre-made html templates already exists for things like sending a greeting mail for new users or a new listing mail, though, an already formated generic message exists for other kinds of emails. Also, a dedicated endpoint is used for sending dev errors whenever an unhandled exception occurs in one of the services. 
 
-<a href="https://github.com/mailer-io/mailer-service/" >
+<a href="https://github.com/rently-io/mailer-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true" />
 </a>
 
@@ -190,7 +190,7 @@ A very basic service whose sole purpose is to save image data in base64 to useab
 
 The images are stored in the same MongoDB database as the listing data. 
 
-<a href="https://github.com/mailer-io/image-service/" >
+<a href="https://github.com/rently-io/image-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true" />
 </a>
 
