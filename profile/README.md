@@ -39,22 +39,61 @@ Registration does not require users to create a dedicated account; simply login 
 
 The site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches through the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) endpoints along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
 
-<br />
-
 <details>
   <summary><b>Table of contents</b></summary>
     
-  <h3>1. System overview</h3>
+  <h3>System overview</h3>
   <ul>
     <li>
-      <a href="#a-full-stack-project">
-        A full stack project
-      </a>
+      <a href="#a-full-stack-project">A full stack project</a>
     </li>
     <li>
-      <a href="#c2-model">
-        C2 model
-      </a>
+      <a href="#c2-model">C2 model</a>
+    </li>
+  </ul>
+  
+  <h3>Software quality</h3>
+  <ul>
+    <li>
+      <a href="#security-concerns">Security concerns</a>
+    </li>
+    <li>
+      <a href="#oauth-implementation">OAuth implementation</a>
+    </li>
+    <li>
+      <a href="#jwt-implementation">JWT implementation</a>
+    </li>
+  </ul>
+
+  <h3>Release management</h3>
+  <ul>
+    <li>
+      <a href="#cicd">CI/CD</a>
+    </li>
+    <li>
+      <a href="#testing">Testing</a>
+    </li>
+  </ul>
+  
+  <h3>About the repositories</h3>
+  <ul>
+    <li>
+      <a href="#frontend">Frontend</a>
+    </li>
+    <li>
+      <a href="#user-service">User Service</a>
+    </li>
+    <li>
+      <a href="#listing-service">Listing Service</a>
+    </li>
+    <li>
+      <a href="#search-service">Search Service</a>
+    </li>
+    <li>
+      <a href="#mailer-service">Mailer Service</a>
+    </li>
+    <li>
+      <a href="#image-service">Image Service</a>
     </li>
   </ul>
 </details>
@@ -68,20 +107,18 @@ The frontend was built in Typescript with the NextJS framework as it offers a nu
 
 More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. [...] More on JWTs under <a href="#jwt-implementation">JWT implementation</a>.
 
-The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables. For release management, each service is first Dockerised and automatically deployed on a Heroku's PaaS if both unit and intergration tests succeed. More on this under <a href="#cicd">CI/CD</a>
+The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables. All services are deployed on Heroku PaaS automatically. More on release management under <a href="#cicd">CI/CD</a>.
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up when first visiting the website!
 
-Asyncronous comm. ORM
+The services communicate through
 
 ### C2 model
 ![C2 model](https://i.imgur.com/CqQbDQA.png)
 
 # Software quality
 
-# CI/CD
-
-# Security concerns
+### Security concerns
 
 ### OAuth implementation
 There are multiple ways of 
@@ -90,6 +127,12 @@ There are multiple ways of
 
 Json Web Tokens allows encryptions of claims for use in authorization between servers.  
 This is how I implemented OAuth and manage user data.
+
+# Release management
+
+### CI/CD
+
+### Testing
 
 # About the repositories
 
