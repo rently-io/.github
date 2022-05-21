@@ -47,7 +47,7 @@ The site is also equiped with an extensive search engine able to perform simple 
   <h3>1. System overview</h3>
   <ul>
     <li>
-      <a href="https://github.com/rently-io/.github/blob/main/profile/README.md#a-full-stack-project">
+      <a href="#a-full-stack-project">
         A full stack project
       </a>
     </li>
