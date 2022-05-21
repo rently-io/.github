@@ -66,9 +66,9 @@ The site is also equiped with an extensive search engine able to perform simple 
 ### A full stack project
 The frontend was built in Typescript with the NextJS framework as it offers a number of adantages over ReactJS, the framework on which NextJS was built upon. Not only can it server requests at greater speeds, but also has support for CSS modules, making frontend component development much easier to style. 
 
-More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. [...] More on JWTs under [JWT implementation]("#jwt-implementation").
+More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. [...] More on JWTs under <a href="#jwt-implementation">JWT implementation</a>.
 
-The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables. For release management, each service is first Dockerised and automatically deployed on a Heroku's PaaS if both unit and intergration tests succeed. More on this under [CI/CD]("#cicd)
+The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables. For release management, each service is first Dockerised and automatically deployed on a Heroku's PaaS if both unit and intergration tests succeed. More on this under <a href="#cicd">CI/CD</a>
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up when first visiting the website!
 
