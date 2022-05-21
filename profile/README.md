@@ -46,9 +46,7 @@ The site is also equiped with an extensive search engine able to perform simple 
 <details>
   <summary><b>Table of contents</b></summary>
     
-  <a href="https://github.com/rently-io/.github/blob/main/profile/README.md#system-overview">
-    <h3>1. System overview</h3>
-  </a>
+  <h3>1. System overview</h3>
   <ul>
     <li>
       <a href="https://github.com/rently-io/.github/blob/main/profile/README.md#a-full-stack-project">
@@ -78,13 +76,41 @@ The backend uses Spring Boot
 ### C2 model
 ![C2 model](https://i.imgur.com/CqQbDQA.png)
 
+# Software quality
+
+# CI/CD
+
+# Security concern
+
+# About the repositories
+
+Expernalised configuration
+
+### Frontend
 ![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
+
+### User service
 ![user-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true)  
+
+SQL database. Uses Java's JPA ORM for MySQL
+
+### Listing service
 ![listing-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=listing-service&include_all_commits=true&show_owner=true)  
+
+Document-based database. Uses Java's JPA ORM for MongoDB
+
+### Search service
 ![search-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=search-service&include_all_commits=true&show_owner=true)  
+
+Uses MongoDB's Text and Geo Indexes. Geos are computed using TomTom API
+
+### Mailer service
 ![mailer-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true)  
+
+Backend implimentation of sending emails. Uses Gmail's smtp to send automated emails under an offical Rently email `info.rently-io@gmail.com`
+
+### Image service
 ![image-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true)  
 
-# OAuth implementation 
-
+# OAuth implementation
 This is how I implemented OAuth and manage user data.
