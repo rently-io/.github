@@ -130,6 +130,7 @@ Security was among the top non-functional requirements for the Rently. Multiple 
 
 ### OAuth implementation
 There are multiple ways of 
+[request diagram]
 
 ### JWT implementation
 Session management is done using JWTs as they provide a statless experience on the server side. 
