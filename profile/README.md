@@ -177,14 +177,18 @@ Uses MongoDB's Text and Geo Indexes. Geos are computed using TomTom API
 </a>
 
 ### Mailer service
-A dedicated solution that is capable of sending various emails. The mailer uses Gmail's smtp to send automated emails under an offical Rently email `info.rently-io@gmail.com`. Pre-made html templates already exists for things like sending a greeting mail for new users or a new listing mail, though, an already formated generic message exists for other kinds of emails. Also, a dedicated endpoint is used for sending dev errors whenever an unhandled exception occurs in one of the services. 
+A dedicated solution that is capable of sending various emails. The mailer uses Gmail's smtp to send automated emails under an offical Rently email under `info.rently-io@gmail.com`.
+
+Pre-made html templates already exists for things like sending a greeting mail for new users or a new listing mail, though, an already formated generic message exists for other kinds of emails. Also, a dedicated endpoint is used for sending dev errors whenever an unhandled exception occurs in one of the services. 
 
 <a href="https://github.com/mailer-io/mailer-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true" />
 </a>
 
 ### Image service
-A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of image. The images are stored in the same MongoDB database as the listing data. 
+A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of image. 
+
+The images are stored in the same MongoDB database as the listing data. 
 
 <a href="https://github.com/mailer-io/image-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true" />
