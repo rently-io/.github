@@ -39,8 +39,6 @@ Registration does not require users to create a dedicated account; simply login 
 
 The site is also equiped with an extensive search engine able to perform simple keyword searches to geolocation and nearby searches through the use of database indices and external APIs such Tomtom's [fuzzy](https://developer.tomtom.com/search-api/documentation/search-service/search-service) and [geo](https://developer.tomtom.com/search-api/documentation/geocoding-service/geocoding-service) endpoints along with Google's [javascript interactive map](https://developers.google.com/maps/documentation/javascript/overview) API.
 
-> ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up!
-
 <br />
 
 <details>
@@ -66,12 +64,15 @@ The site is also equiped with an extensive search engine able to perform simple 
 # System overview
 
 ### A full stack project
-
 The frontend was built in Typescript with the NextJS framework as it offers a number of adantages over ReactJS, the framework on which NextJS was built upon. Not only can it server requests at greater speeds, but also has support for CSS modules, making frontend component development much easier to style. 
 
-More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. More on JWTs [here]().
+More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. [...] More on JWTs [here]("https://github.com/rently-io/.github/blob/main/profile/README.md#ci/cd).
 
-The backend uses Spring Boot
+The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables. For release management, each service is first Dockerised and automatically deployed on a Heroku's PaaS if both unit and intergration tests succeed. More on this under [CI/CD]()
+
+> ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up when first visiting the website!
+
+Asyncronous comm. ORM
 
 ### C2 model
 ![C2 model](https://i.imgur.com/CqQbDQA.png)
@@ -80,11 +81,17 @@ The backend uses Spring Boot
 
 # CI/CD
 
-# Security concern
+# Security concerns
+
+### OAuth implementation
+There are multiple ways of 
+
+### JWT implementation
+
+Json Web Tokens allows encryptions of claims for use in authorization between servers.  
+This is how I implemented OAuth and manage user data.
 
 # About the repositories
-
-Expernalised configuration
 
 ### Frontend
 ![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
@@ -112,5 +119,8 @@ Backend implimentation of sending emails. Uses Gmail's smtp to send automated em
 ### Image service
 ![image-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true)  
 
-# OAuth implementation
-This is how I implemented OAuth and manage user data.
+# Works cited
+
+[oauth](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security?utm_source=Dzone&utm_medium=Company-post&utm_campaign=Oauth&utm_term=Session-Management-1)
+
+[jwt](jwt.io)
