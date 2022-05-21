@@ -123,7 +123,7 @@ Security was among the top non-functional requirements for the Rently. Multiple 
 
 | Risk        | Mitigation  |
 | :---        | :------     |
-| Security Logging and Monitoring Failures | All services feature a logger class `Broadcaster` that provides rich logging of events that include a readable timestamp prepended to a category label (ex: `ERROR`, `INFO`, `HTTP`...) along with a message. What qualifies as an event includes a request, an error, or a manual log. Each request's action can be traced from start to finish. All logs can be downloaded in CSV format via Heroku. Additioanlly, any unhandled exception that occur are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. |
+| Security Logging and Monitoring Failures | All services feature a logger class `Broadcaster` that provides rich logging of events that include a readable timestamp prepended to a category label (ex: `ERROR`, `INFO`, `HTTP`...) along with a message. What qualifies as an event includes a request, an error, or a manual log. Each request's action can be traced from start to finish. All logs can be downloaded in CSV format via Heroku. No internal server errors are exposed to bear responses. Additioanlly, any unhandled exception that occur are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. |
 | Identification and Authentication Failures | It was decided early on that no custom logging was going to be introduced on the website and that user credentials were going to be managed on a database. Instead, authentication happens exclusively via OAuth through trusted and popular providers including Twitter, Facebook, or Google. Thus, the website heavily relies on Json Web Tokens. Although there are some [concerns](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/) still with JWTs such as lose expirations blocks, it is a safer to deal with than password hashing. Each service captures requests through a middleware and verifies JWT integrity. |
 | Injection | Any incomoing persistent data is verified. Requests are terminated if data does not conform. Rently operates two databases, an SQL and document-based ones. In both instances, object relational mapping, making use of Java's already well established Persistence API. Although in some instances JPA is [prone to injection attacks](https://www.adam-bien.com/roller/abien/entry/preventing_injection_in_jpa_query), using Spring Boot's [named method query](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation) creation mitigates possible injection. |
 | Server-Side Request Forgery | Text        |
@@ -145,31 +145,50 @@ This is how I implemented OAuth and manage user data.
 
 # About the repositories
 
+Below is are brief descriptions or particularities about each repository. For more information, click on their cards.
+
 ### Frontend
-![rently](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true)
+As mentioned ealier, the frontend uses NextJS. To facilitate the implementation of sessions with JWTs, the NextAuth library was used. 
+
+<a href="https://github.com/mailer-io/rently/" >
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=rently&include_all_commits=true&show_owner=true" />
+</a>
 
 ### User service
-![user-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true)  
-
 SQL database. Uses Java's JPA ORM for MySQL. V1 vs V2
 
-### Listing service
-![listing-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=listing-service&include_all_commits=true&show_owner=true)  
+<a href="https://github.com/mailer-io/user-service/" >
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true" /> 
+</a>
 
+
+### Listing service
 Document-based database. Uses Java's JPA ORM for MongoDB
 
-### Search service
-![search-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=search-service&include_all_commits=true&show_owner=true)  
+<a href="https://github.com/mailer-io/listing-service/" >
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=listing-service&include_all_commits=true&show_owner=true" /> 
+</a>
 
+### Search service
 Uses MongoDB's Text and Geo Indexes. Geos are computed using TomTom API
 
-### Mailer service
-![mailer-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true)  
+<a href="https://github.com/mailer-io/search-service/" >
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=search-service&include_all_commits=true&show_owner=true" />
+</a>
 
-Backend implimentation of sending emails. Uses Gmail's smtp to send automated emails under an offical Rently email `info.rently-io@gmail.com`
+### Mailer service
+A dedicated solution that is capable of sending various emails. The mailer uses Gmail's smtp to send automated emails under an offical Rently email `info.rently-io@gmail.com`. Pre-made html templates already exists for things like a greeting mail for new users or a new listing mail, though, an already formated generic message exists for other kinds of emails. Also, a dedicated endpoint is used for sending dev errors whenever an unhandled exception occurs in one of the services. 
+
+<a href="https://github.com/mailer-io/mailer-service/" >
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true" />
+</a>
 
 ### Image service
-![image-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true)  
+A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of image. The images are stored in the same MongoDB database as the listing data. 
+
+<a href="https://github.com/mailer-io/image-service/" >
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true" />
+</a>
 
 # Reflection and improvements
 
