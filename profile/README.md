@@ -96,6 +96,8 @@ The site is also equiped with an extensive search engine able to perform simple 
       <a href="#image-service">Image Service</a>
     </li>
   </ul>
+  
+  Reflection + Works cited
 </details>
 
 <br />
@@ -107,11 +109,9 @@ The frontend was built in Typescript with the NextJS framework as it offers a nu
 
 More importantly, NextJS has server-side rendering. This is significant as sensitive things such as API keys and Json Web Token generation is not exposed to the client. [...] More on JWTs under <a href="#jwt-implementation">JWT implementation</a>.
 
-The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables. All services are deployed on Heroku PaaS automatically. More on release management under <a href="#cicd">CI/CD</a>.
+The backend services were developed with Spring Boot in Java. They follow industry best practices including expernalised configurations, environment specific variables, along with CORS and JWTs as well. All services are deployed on Heroku PaaS automatically. More on release management under <a href="#cicd">CI/CD</a>.
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up when first visiting the website!
-
-The services communicate through
 
 ### C2 model
 ![C2 model](https://i.imgur.com/CqQbDQA.png)
@@ -119,12 +119,20 @@ The services communicate through
 # Software quality
 
 ### Security concerns
+Security was among the top non-functional requirements for the Rently. Multiple security aspects were addressed on [OWASP's top 10 list](https://owasp.org/www-project-top-ten/), including: Security Logging and Monitoring Failures, Identification and Authentication Failures, Injection, and Server-Side Request Forgery:
+
+| Risk        | Mitigation  |
+| :---        | :------     |
+| Security Logging and Monitoring Failures | All services feature a logger class `Broadcaster` that provides rich logging of events that include a readable timestamp prepended to a category label (ex: `ERROR`, `INFO`, `HTTP`...) along with a message. What qualifies as an event includes a request, an error, or a manual log. Each request's action can be traced from start to finish. All logs can be downloaded in CSV format via Heroku. Additioanlly, any unhandled exception that occur are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. |
+| Identification and Authentication Failures | It was decided early on that no custom logging was going to be introduced on the website and that user credentials were going to be managed on a database. Instead, authentication happens exclusively via OAuth through trusted and popular providers including Twitter, Facebook, or Google. Thus, the website heavily relies on Json Web Tokens. Although there are some [concerns](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/) still with JWTs such as lose expirations blocks, it is a safer to deal with than password salting and hashing. |
+| Injection | Text        |
+| Server-Side Request Forgery | Text        |
 
 ### OAuth implementation
 There are multiple ways of 
 
 ### JWT implementation
-
+Session management is done using JWTs as they provide a statless experience on the server side. 
 Json Web Tokens allows encryptions of claims for use in authorization between servers.  
 This is how I implemented OAuth and manage user data.
 
@@ -162,8 +170,24 @@ Backend implimentation of sending emails. Uses Gmail's smtp to send automated em
 ### Image service
 ![image-service](https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true)  
 
+# Reflection and improvements
+
+# Security
+The greatest challenge tackled in the project involved security. Designing the frontend or configuring the backend got me constantly questioning *Am I exposing something here?* I attempted to tackled all concerns about data exposure as much as possible through the intergration of things such as JWTs, CORS, external configurations. Light security tests were performed using [webtools](https://pentest-tools.com/website-vulnerability-scanning/website-scanner) though, those tests are inadequate. I would have spent more time researching on how to properly and fully test the security of my website.
+
+# Code
+
+
 # Works cited
 
 [oauth](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security?utm_source=Dzone&utm_medium=Company-post&utm_campaign=Oauth&utm_term=Session-Management-1)
 
 [jwt](jwt.io)
+
+[owasp](https://owasp.org/www-project-top-ten/)
+
+[website security](https://pentest-tools.com/website-vulnerability-scanning/website-scanner)
+
+[bugsnag](https://app.bugsnag.com/somethingrandom/rently/overview?release_stage=production)
+
+[jwt cons](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/)
