@@ -100,8 +100,6 @@ The site is also equiped with an extensive search engine able to perform simple 
   Reflection + Works cited
 </details>
 
-<br />
-
 # System overview
 
 ### A full stack project
@@ -140,6 +138,7 @@ This is how I implemented OAuth and manage user data.
 # Release management
 
 ### CI/CD
+Perhaps one of the greatest assets surrounding an IT project is proper a Continous Intergration and Delievery enveronment. The project relies on Github actions to perfom various CI/CD tasks. Upon each PRs 
 
 ### Testing
 
