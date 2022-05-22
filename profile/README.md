@@ -97,7 +97,20 @@ The site is also equiped with an extensive search engine able to perform simple 
     </li>
   </ul>
   
-  Reflection + Works cited
+  <h3>Reflection and improvements</h3>
+  <ul>
+    <li>
+      <a href="#frontend">Security </a>
+    </li>
+    <li>
+      <a href="#user-service">Code</a>
+    </li>
+    <li>
+      <a href="#user-service">General mindset</a>
+    </li>
+  </ul>
+  
+  <h3>Works cited</h3>
 </details>
 
 # System overview
@@ -124,7 +137,7 @@ Security was among the top non-functional requirements for the Rently. Multiple 
 | Security Logging and Monitoring Failures | All services feature a logger class `Broadcaster` that provides rich logging of events that include a readable timestamp prepended to a category label (ex: `ERROR`, `INFO`, `HTTP`...) along with a message. What qualifies as an event includes a request, an error, or a manual log. Each request's action can be traced from start to finish. All logs can be downloaded in CSV format via Heroku. No internal server errors are exposed to bear responses. Additioanlly, any unhandled exception that occur are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. |
 | Identification and Authentication Failures | It was decided early on that no custom logging was going to be introduced on the website and that user credentials were going to be managed on a database. Instead, authentication happens exclusively via OAuth through trusted and popular providers including Twitter, Facebook, or Google. Thus, the website heavily relies on Json Web Tokens. Although there are some [concerns](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/) still with JWTs such as lose expirations blocks, it is a safer to deal with than password hashing. Each service captures requests through a middleware and verifies JWT integrity. |
 | Injection | Any incomoing persistent data is verified. Requests are terminated if data does not conform. Rently operates two databases, an SQL and document-based ones. In both instances, object relational mapping, making use of Java's already well established Persistence API. Although in some instances JPA is [prone to injection attacks](https://www.adam-bien.com/roller/abien/entry/preventing_injection_in_jpa_query), using Spring Boot's [named method query](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation) creation mitigates possible injection. |
-| Server-Side Request Forgery | Text        |
+| Server-Side Request Forgery | CORS is enabled across services allowing only one URL to make requests. |
 
 ### OAuth implementation
 There are multiple ways of 
@@ -138,7 +151,15 @@ This is how I implemented OAuth and manage user data.
 # Release management
 
 ### CI/CD
-Perhaps one of the greatest assets surrounding an IT project is a proper continous intergration and delievery enveronment. The project relies on Github actions to perfom various CI/CD tasks. Upon each PRs 
+Perhaps one of the greatest assets surrounding an IT project is a proper CI/CD enveronment. The project relies on Github actions to perfom various CI/CD tasks. 
+
+Upon any PRs from a development branch to a master branch, usually taking place at the end of sprints, 2 process are performed. To begin with, the code is automatically tested and dockerised to a remote Dockerhub repository and then deployed on Heroku. Should a test fail, the process is terminated and a notification is sent. 
+
+In parallel, static code analysis is performed using Sonarcloud's online tool. A comment to each PRs is appended with the static code results. Generally, the results are good. However, security vulnerabilities within the pushed code are usually immediately addressed for the reminder of the sprint. 
+
+Also, Github Dependabots keep track of any outdated or flawed dependacies in the repository and automatically upgrades them if needed. 
+
+This templated is replicated across all repositories.
 
 ### Testing
 
@@ -195,11 +216,10 @@ The images are stored in the same MongoDB database as the listing data.
 
 # Reflection and improvements
 
-# Security
+### Security
 The greatest challenge tackled in the project involved security. Designing the frontend or configuring the backend got me constantly questioning *Am I exposing something here?* I attempted to tackled all concerns about data exposure as much as possible through the intergration of things such as JWTs, CORS, external configurations. Light security tests were performed using [webtools](https://pentest-tools.com/website-vulnerability-scanning/website-scanner) though, those tests are inadequate. I would have spent more time researching on how to properly and fully test the security of my website.
 
-# Code
-
+### Code
 
 # Works cited
 
