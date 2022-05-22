@@ -151,6 +151,8 @@ This is how I implemented OAuth and manage user data.
 # Release management
 
 ### CI/CD
+**Dockerisation | Heroku deployment | Static code analysis**
+
 Perhaps one of the greatest assets surrounding an IT project is a proper CI/CD enveronment. The project relies on Github actions to perfom various CI/CD tasks. 
 
 Upon any PRs from a development branch to a master branch, usually taking place at the end of sprints, 2 process are performed. To begin with, the code is automatically tested and dockerised to a remote Dockerhub repository and then deployed on Heroku. Should a test fail, the process is terminated and a notification is sent. 
