@@ -138,7 +138,7 @@ This is how I implemented OAuth and manage user data.
 # Release management
 
 ### CI/CD
-Perhaps one of the greatest assets surrounding an IT project is proper a Continous Intergration and Delievery enveronment. The project relies on Github actions to perfom various CI/CD tasks. Upon each PRs 
+Perhaps one of the greatest assets surrounding an IT project is a proper continous intergration and delievery enveronment. The project relies on Github actions to perfom various CI/CD tasks. Upon each PRs 
 
 ### Testing
 
