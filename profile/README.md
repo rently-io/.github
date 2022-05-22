@@ -213,7 +213,13 @@ Pre-made html templates already exists for things like sending a greeting mail f
 </a>
 
 ### Image service
-A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of image. 
+A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of image:
+
+<p align="center">
+  <img height="200px" src="https://i.imgur.com/SmS5WmQ.png" />
+  <img height="200px" src="https://i.imgur.com/scIquXW.jpg" />
+  <img height="200px" src="https://i.imgur.com/HXTqtA0.png" />
+</p>
 
 The images are stored in the same MongoDB database as the listing data. 
 
