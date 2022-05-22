@@ -151,7 +151,7 @@ This is how I implemented OAuth and manage user data.
 # Release management
 
 ### CI/CD
-**Dockerisation | Heroku deployment | Static code analysis**
+**Dockerhub dockerisation | Heroku deployment | Sonarcloud static code analysis**
 
 Perhaps one of the greatest assets surrounding an IT project is a proper CI/CD enveronment. The project relies on Github actions to perfom various CI/CD tasks. 
 
