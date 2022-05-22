@@ -213,7 +213,7 @@ Pre-made html templates already exists for things like sending a greeting mail f
 </a>
 
 ### Image service
-A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of image:
+A very basic service whose sole purpose is to save image data in base64 to useable URL links. Upon each GET requests, a "*Rently*" watermark is stamped onto the bottom left corner of images:
 
 <p align="center">
   <img height="200px" src="https://i.imgur.com/SmS5WmQ.png" />
