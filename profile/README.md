@@ -140,12 +140,16 @@ Security was among the top non-functional requirements for the Rently. Multiple 
 | Server-Side Request Forgery | CORS is enabled across services when applicable allowing only one URL to make requests. In cases where no origin is specified, only stripped-down data objects can be retireved. For instance retriving listing data won't feature specific address location nor a leaser's id. |
 
 ### OAuth implementation
-There are multiple ways of 
+There are two ways of OAuth can be implemented; either in the frontend or the backend. The project opted a frontend implementation. Before any attempt at posting a listing, a user most login through one of the OAuth providers (Twitter, Google, Facebook). Once logged in, the system checks and fecthes proper user data in the backend. The process is as follow:
 
 <p align="center">
   <img height="500px" src="https://i.imgur.com/GYD4Ss8.jpg" />
 </p>
-  
+
+This implementation of OAuth allows for user authorization password-free and secure. Once logged in with proper use data, users can make requests to interact with other services with a properly generated JWT which would be otherwise impossible without login. 
+
+The system essential behaves as if a user had created an account conventionally like other websites.
+
 ### JWT implementation
 Session management is done using JWTs as they provide a statless experience on the server side. 
 Json Web Tokens allows encryptions of claims for use in authorization between servers.  
