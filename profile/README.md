@@ -161,7 +161,7 @@ In parallel, static code analysis is performed using Sonarcloud's online tool. A
 
 Also, Github Dependabots keep track of any outdated or flawed dependacies in the repository and automatically upgrades them if needed. 
 
-This templated is replicated across all repositories.
+This strategy is replicated across all repositories.
 
 ### Testing
 
