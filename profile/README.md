@@ -186,7 +186,11 @@ As mentioned ealier, the frontend uses NextJS. To facilitate the implementation 
 </a>
 
 ### User service
-SQL database. Uses Java's JPA ORM for MySQL. V1 vs V2
+In brief, this service performs CRUD on user-related data. It uses an MySQL database deployed on Heroku. 
+
+This service was the first one developed. You'll notice there is a `V2-latest` and `V1` branches instead of a `master` or `main` branch. The reason behind this is the first iteration, `V1` of this service was not up to standard in my opinion. Instead of entrusting my code with other, more reliable library to handle certain aspect of the service, I tried to code everything myself. While I believe one should always have authority of ones code, it shouldn't come at the expense of reliability, development time, and security. Upon the first static code analysis, multiple sources of potential SQL injection were possible. 
+
+The second iteration, `V2-latest` aims to fix these issues altogether with the use of JPA.
 
 <a href="https://github.com/rently-io/user-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true" /> 
