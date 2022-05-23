@@ -151,9 +151,11 @@ This implementation of OAuth allows for user authorization password-free and sec
 The system essential behaves as if a user had created an account conventionally like other websites.
 
 ### JWT implementation
-Session management is done using JWTs as they provide a statless experience on the server side. 
-Json Web Tokens allows encryptions of claims for use in authorization between servers.  
-This is how I implemented OAuth and manage user data.
+Json Web Tokens allows encryptions of claims for use in authorization between services in a staleless manner and session management for the frontend. Each service has a its own secret and hashing algorithm. For exemple, the user service has for secret `HelloDarknessMyOldFriend` and hasing algorithm the `SHA256`. 
+
+In order to make server-side requests, the services and the frontend need to be aware of other services' secret and hasghing algorithm to generate valid JWTs. A request is rejected if inproper authorization headers are present. 
+
+These parameters are set expernally in a profile enveronment file.
 
 # Release management
 
@@ -171,6 +173,7 @@ Also, Github Dependabots keep track of any outdated or flawed dependacies in the
 This strategy is replicated across all repositories.
 
 ### Testing
+Testing testing
 
 # About the repositories
 
