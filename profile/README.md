@@ -186,18 +186,18 @@ As mentioned ealier, the frontend uses NextJS. To facilitate the implementation 
 </a>
 
 ### User service
-In brief, this service performs CRUD on user-related data. It uses an MySQL database deployed on Heroku. 
+In brief, this service is able performs CRUD on user-related data. It uses an MySQL database deployed on Heroku. 
 
 This service was the first one developed. You'll notice there is a `V2-latest` and `V1` branches instead of a `master` or `main` branch. The reason behind this is the first iteration, `V1` of this service was not up to standard in my opinion. Instead of entrusting my code with other, more reliable library to handle certain aspect of the service, I tried to code everything myself. While I believe one should always have authority of ones code, it shouldn't come at the expense of reliability, development time, and security. Upon the first static code analysis, multiple sources of potential SQL injection were possible. 
 
-The second iteration, `V2-latest` aims to fix these issues altogether with the use of JPA.
+The second iteration, `V2-latest` aims to fix these issues altogether with the use of JPA. I go into deeper detail under <a href="#general-mindset"> General mindset</a>.
 
 <a href="https://github.com/rently-io/user-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=user-service&include_all_commits=true&show_owner=true" /> 
 </a>
 
 ### Listing service
-Document-based database. Uses Java's JPA ORM for MongoDB
+Much like the User service, this service perfoms CRUD on listing data. Rather than an SQL database, it was decided that the data would be stored in a document-based database, in this case a MongoDB database, as it is easier to work with for query indexes.
 
 <a href="https://github.com/rently-io/listing-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=listing-service&include_all_commits=true&show_owner=true" /> 
@@ -232,7 +232,7 @@ A very basic service whose sole purpose is to save image data in base64 to useab
   <img height="200px" src="https://i.imgur.com/HXTqtA0.png" />
 </p>
 
-The images are stored in the same MongoDB database as the listing data. 
+The images are stored in the same MongoDB database context as the listing data. 
 
 <a href="https://github.com/rently-io/image-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=image-service&include_all_commits=true&show_owner=true" />
