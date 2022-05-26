@@ -225,9 +225,10 @@ Pre-made html templates already exists for things like sending a greeting mail f
 Some exemples of emails already dispatched:
 
 <p align="center">
-  <img height="300px" src="https://i.imgur.com/SYgXt6q.png" />
-  <img height="300px" src="https://i.imgur.com/wDKZMIM.png" />
-  <img height="300px" src="https://i.imgur.com/kBXMhTV.png" />
+  <img width="400px" src="https://i.imgur.com/SYgXt6q.png" />
+  <img width="400px" src="https://i.imgur.com/wDKZMIM.png" />
+  <img width="400px" src="https://i.imgur.com/kBXMhTV.png" />
+  <img width="400px" src="https://i.imgur.com/dH9AN0i.png" />
 </p>
 
 <a href="https://github.com/rently-io/mailer-service/" >
