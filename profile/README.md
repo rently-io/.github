@@ -222,6 +222,14 @@ A dedicated solution that is capable of sending various emails. The mailer uses 
 
 Pre-made html templates already exists for things like sending a greeting mail for new users or a new listing mail, though, an already formated generic message exists for other kinds of emails. Also, a dedicated endpoint is used for sending dev errors whenever an unhandled exception occurs in one of the services.
 
+Some exemples of emails already dispatched:
+
+<p align="center">
+  <img height="300px" src="https://i.imgur.com/SYgXt6q.png" />
+  <img height="300px" src="https://i.imgur.com/wDKZMIM.png" />
+  <img height="300px" src="https://i.imgur.com/kBXMhTV.png" />
+</p>
+
 <a href="https://github.com/rently-io/mailer-service/" >
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=rently-io&repo=mailer-service&include_all_commits=true&show_owner=true" />
 </a>
