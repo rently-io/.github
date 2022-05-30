@@ -128,7 +128,7 @@ The backend services were developed with Spring Boot in Java. They follow indust
 
 Each blue box represents a repository in this project:
 
-![C2 model](https://i.imgur.com/CqQbDQA.png)
+![C2 model](https://i.imgur.com/KEhA9Dx.jpg)
 
 # Software quality
 
