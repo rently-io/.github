@@ -175,13 +175,16 @@ Also, Github Dependabots keep track of any outdated or flawed dependacies in the
 
 This strategy is replicated across all repositories.
 
+An exemple of CI actions from the User Service can be found [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/ci.yml).
+
+An exemple of CD actions from the User Service can be found [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/cd.yml).
+
 ### Testing
 |Test|Description|Example| 
 |---:|---|---| 
 | **Unit** | Ensures that multiple aspect of the endpoint work properly within the scope of the endpoint itself, on a *local* level | <ul><li>Correct data gets yield from a request</li><li>No *`null`* values are returned when an empty *`string`* was expected</li></ul> |
 | **Integration** | Like the name suggests, integration testing is used to make sure *multiple endpoints* work/interact with one another correctly | <ul><li>`200`/`201`/`204`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
 | **E2E**| When tests fail, I can address the failures and adjust my code for it to work properly, configure new test cases when and prioritize | <ul><li>Reformatting JSON response data can cause certain tests to fail</li></ul>
-
 
 # About the repositories
 
