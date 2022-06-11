@@ -137,7 +137,7 @@ Security was among the top non-functional requirements for the Rently. Multiple 
 
 | Risk        | Mitigation  |
 | :---        | :------     |
-| Security Logging and Monitoring Failures | All services feature a logger class `Broadcaster` that provides rich logging of events that include a readable timestamp prepended to a category label (ex: `ERROR`, `INFO`, `HTTP`...) along with a message. What qualifies as an event includes a request, an error, or a manual log. Each request's action can be traced from start to finish. All logs can be downloaded in CSV format via Heroku. No internal server errors are exposed to bear responses. Additioanlly, any unhandled exception that occur are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. |
+| Security Logging and Monitoring Failures | All services feature a logger class `Broadcaster` that provides rich logging of events that include a readable timestamp prepended to a category label (ex: `ERROR`, `INFO`, `HTTP`...) along with a message. What qualifies as an event includes a request, an error, or a manual log. Each request's action can be traced from start to finish. All logs can be downloaded in CSV format via Heroku. No internal server errors are exposed to bear responses. |
 | Identification and Authentication Failures | It was decided early on that no custom logging was going to be introduced on the website and that user credentials were going to be managed on a database. Instead, authentication happens exclusively via OAuth through trusted and popular providers including Twitter, Facebook, or Google. Thus, the website heavily relies on Json Web Tokens. Although there are some [concerns](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/) still with JWTs such as lose expirations blocks, it is a safer to deal with than password hashing. Each service captures requests through a middleware and verifies JWT integrity. |
 | Injection | Any incomoing persistent data is verified. Requests are terminated if data does not conform. Rently operates two databases, an SQL and document-based ones. In both instances, object relational mapping, making use of Java's already well established Persistence API. Although in some instances JPA is [prone to injection attacks](https://www.adam-bien.com/roller/abien/entry/preventing_injection_in_jpa_query), using Spring Boot's [named method query](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation) creation mitigates possible injection. |
 | Server-Side Request Forgery | CORS is enabled across services when applicable allowing only one URL to make requests. In cases where no origin is specified, only stripped-down data objects can be retireved. For instance retriving listing data won't feature specific address location nor a leaser's id. |
@@ -183,6 +183,18 @@ An exemple of CI and CD actions from the User Service can be found [here](https:
 | **Unit** | Ensures that multiple aspect of the endpoint work properly within the scope of the endpoint itself, on a *local* level | <ul><li>Correct data gets yield from a request</li><li>No *`null`* values are returned when an empty *`string`* was expected</li></ul> |
 | **Integration** | Like the name suggests, integration testing is used to make sure *multiple endpoints* work/interact with one another correctly | <ul><li>`200`/`201`/`204`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
 | **E2E**| When tests fail, I can address the failures and adjust my code for it to work properly, configure new test cases when and prioritize | <ul><li>Reformatting JSON response data can cause certain tests to fail</li></ul>
+
+# Error management
+
+There are always errors that occur on deployed stuff, even after testing. Any unhandled exception that occur on an service are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. 
+
+Bugsnag allows the ability to view the most frequent errors on a timeline:
+<p align="center">
+  <img src="https://i.imgur.com/kimM7Sv.png" width=500 /> 
+  <img src="https://i.imgur.com/jXmJOyQ.png" width=500 /> 
+</p>
+
+Having the ability to view errors overtime allows me to focus on the most reoccuring or most destructive errors.
 
 # About the repositories
 
