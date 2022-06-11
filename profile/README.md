@@ -175,9 +175,7 @@ Also, Github Dependabots keep track of any outdated or flawed dependacies in the
 
 This strategy is replicated across all repositories.
 
-An exemple of CI actions from the User Service can be found [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/ci.yml).
-
-An exemple of CD actions from the User Service can be found [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/cd.yml).
+An exemple of CI and CD actions from the User Service can be found [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/ci.yml) and [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/cd.yml) respectively.
 
 ### Testing
 |Test|Description|Example| 
