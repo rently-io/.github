@@ -188,7 +188,7 @@ An exemple of CI and CD actions from the User Service can be found [here](https:
 | **Integration** | Like the name suggests, integration testing is used to make sure *multiple endpoints* work/interact with one another correctly | <ul><li>`200`/`201`/`204`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
 | **E2E**| When tests fail, I can address the failures and adjust my code for it to work properly, configure new test cases when and prioritize | <ul><li>Reformatting JSON response data can cause certain tests to fail</li></ul>
 
-### Error management
+# Error management
 There are always errors that occur on deployed stuff, even after testing. Any unhandled exception that occur on an service are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. 
 
 Bugsnag allows the ability to view the most frequent errors on a timeline:
@@ -199,7 +199,7 @@ Bugsnag allows the ability to view the most frequent errors on a timeline:
 
 Having the ability to view errors overtime allows me to focus on the most reoccuring or most destructive errors.
 
-### UX testing
+# UX testing
 There is a verity of testing methods for testing UX. For this project, two types of testing were performed, explorative and assessment testing. 
 
 Assessment testing aims to assess the application in its current state and identify potential flaws or user frustration. This was done unmonitored remotely using HotJar, a tool integrated within the website that directly records user inputs anonymously with consent. 
