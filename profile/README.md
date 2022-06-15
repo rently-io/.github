@@ -194,8 +194,8 @@ There are always errors that occur on deployed stuff, even after testing. Any un
 
 Bugsnag allows the ability to view the most frequent errors on a timeline:
 <p align="center">
-  <img src="https://i.imgur.com/kimM7Sv.png" width=450 /> 
-  <img src="https://i.imgur.com/jXmJOyQ.png" width=450 /> 
+  <img src="https://i.imgur.com/kimM7Sv.png" width=400 /> 
+  <img src="https://i.imgur.com/jXmJOyQ.png" width=400 /> 
 </p>
 
 Having the ability to view errors overtime allows me to focus on the most reoccuring or most destructive errors.
@@ -206,8 +206,8 @@ Hojar is a tool one can implement on his website to perform user experience test
 Among other things, this tool generates heatmaps of user interaction on a per page basis:
 
 <p align="center">
-  <img src="https://i.imgur.com/38AUB0l.jpg" width=450px />
-  <img src="https://i.imgur.com/bMkoB62.jpg" width=450px />
+  <img src="https://i.imgur.com/38AUB0l.jpg" width=400px />
+  <img src="https://i.imgur.com/bMkoB62.jpg" width=400px />
 </p>
 
 This tool gives me the ability to perform unmoinotered remote UX testing contiously. Testing that reveals design flaws or potential hotspots of user frustration.
@@ -298,7 +298,6 @@ The greatest challenge tackled in the project involved security. Designing the f
 ### Code
 
 ### General mindset
-
 
 # Works cited
 
