@@ -185,8 +185,9 @@ An exemple of CI and CD actions from the User Service can be found [here](https:
 |Test|Description|Example| 
 |---:|---|---| 
 | **Unit** | Ensures that multiple aspect of the endpoint work properly within the scope of the endpoint itself, on a *local* level | <ul><li>Correct data gets yield from a request</li><li>No *`null`* values are returned when an empty *`string`* was expected</li></ul> |
-| **Integration** | Like the name suggests, integration testing is used to make sure *multiple endpoints* work/interact with one another correctly | <ul><li>`200`/`201`/`204`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
-| **E2E**| When tests fail, I can address the failures and adjust my code for it to work properly, configure new test cases when and prioritize | <ul><li>Reformatting JSON response data can cause certain tests to fail</li></ul>
+| **Integration** | Like the name suggests, integration testing is used to make sure *multiple endpoints* work/interact with one another correctly | <ul><li>`200`/`401`/`400`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
+| **E2E**| Some amount of E2E testing has been made on the frontend using Cypress. See reflection for more information. | <ul><li>Testing whether links redirect to proper page or form submission has proper input validation. </li></ul>
+| **Regression**| When tests fail, I can address the failures and adjust my code for it to work properly, configure new test cases when and prioritize | <ul><li>Reformatting JSON response data can cause certain tests to fail</li></ul>
 
 # Error management
 There are always errors that occur on deployed stuff, even after testing. Any unhandled exception that occur on an service are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. 
@@ -200,15 +201,18 @@ Bugsnag allows the ability to view the most frequent errors on a timeline:
 Having the ability to view errors overtime allows me to focus on the most reoccuring or most destructive errors.
 
 # UX testing
-There is a verity of testing methods for testing UX. For this project, two types of testing were performed, explorative and assessment testing. 
+Hojar is a tool one can implement on his website to perform user experience testing. Every 100 ms, Hotjar records user inputs and website events anonymously. 
 
-Assessment testing aims to assess the application in its current state and identify potential flaws or user frustration. This was done unmonitored remotely using HotJar, a tool integrated within the website that directly records user inputs anonymously with consent. 
+Among other things, this tool generates heatmaps of user interaction on a per page basis:
 
-Explorative testing aims to find what kind of features the users want or features that are missing from the application to improve user stories. Explorative testing was done in person and monitored.
+<p align="center">
+  <img src="https://i.imgur.com/38AUB0l.jpg" width=450px />
+  <img src="https://i.imgur.com/bMkoB62.jpg" width=450px />
+</p>
 
-(Images, exemple)
+This tool gives me the ability to perform unmoinotered remote UX testing contiously. Testing that reveals design flaws or potential hotspots of user frustration.
 
-[In depth reading here]
+For more information regarding some of the findings, please click [here](https://github.com/greffgreff/semester-content/blob/main/ux-testing.md).
 
 # About the repositories
 Below is are brief descriptions or particularities about each repository. For more information, click on their cards.
@@ -289,9 +293,12 @@ The images are stored in the same MongoDB database context as the listing data.
 ### Security
 The greatest challenge tackled in the project involved security. Designing the frontend or configuring the backend got me constantly questioning *Am I exposing something here?* I attempted to tackled all concerns about data exposure as much as possible through the intergration of things such as JWTs, CORS, etc. Light security tests were performed using [webtools](https://pentest-tools.com/website-vulnerability-scanning/website-scanner) though, those tests are inadequate. I would have spent more time researching on how to properly and fully test the security of my website.
 
+### Testing
+
 ### Code
 
 ### General mindset
+
 
 # Works cited
 
