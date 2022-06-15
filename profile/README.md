@@ -194,8 +194,8 @@ There are always errors that occur on deployed stuff, even after testing. Any un
 
 Bugsnag allows the ability to view the most frequent errors on a timeline:
 <p align="center">
-  <img src="https://i.imgur.com/kimM7Sv.png" width=500 /> 
-  <img src="https://i.imgur.com/jXmJOyQ.png" width=500 /> 
+  <img src="https://i.imgur.com/kimM7Sv.png" width=450 /> 
+  <img src="https://i.imgur.com/jXmJOyQ.png" width=450 /> 
 </p>
 
 Having the ability to view errors overtime allows me to focus on the most reoccuring or most destructive errors.
