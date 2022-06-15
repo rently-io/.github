@@ -128,7 +128,7 @@ The backend services were developed with Spring Boot in Java. They follow indust
 
 > ⚠️ Please note that the services are currently deployed on a free Heroku instance and need a few seconds to warm up when first visiting the website!
 
-### C2 container model
+### System architecture
 
 Each blue box represents a repository in this project:
 
