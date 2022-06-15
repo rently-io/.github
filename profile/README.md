@@ -302,18 +302,12 @@ The greatest challenge tackled in the project involved security. Designing the f
 
 # Works cited
 
-[oauth](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security?utm_source=Dzone&utm_medium=Company-post&utm_campaign=Oauth&utm_term=Session-Management-1)
-
-[jwt](jwt.io)
-
-[owasp](https://owasp.org/www-project-top-ten/)
-
-[website security](https://pentest-tools.com/website-vulnerability-scanning/website-scanner)
-
-[bugsnag](https://app.bugsnag.com/somethingrandom/rently/overview?release_stage=production)
-
-[jwt cons](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/)
-
-[prone to injection attacks](https://www.adam-bien.com/roller/abien/entry/preventing_injection_in_jpa_query),
-
-[named method query](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation)
+[Oauth](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security?utm_source=Dzone&utm_medium=Company-post&utm_campaign=Oauth&utm_term=Session-Management-1) &nbsp;
+[Jwt](jwt.io) &nbsp;
+[Owasp](https://owasp.org/www-project-top-ten/) &nbsp; 
+[Website security](https://pentest-tools.com/website-vulnerability-scanning/website-scanner) &nbsp;
+[Bugsnag](https://app.bugsnag.com/somethingrandom/rently/overview?release_stage=production) &nbsp;
+[Hotjar](https://www.hotjar.com/) &nbsp;
+[Jwt cons](https://www.loginradius.com/blog/identity/pros-cons-token-authentication/) &nbsp;
+[ORM injection](https://www.adam-bien.com/roller/abien/entry/preventing_injection_in_jpa_query) &nbsp;
+[Name query methods](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation) &nbsp;
