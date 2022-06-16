@@ -290,17 +290,19 @@ The images are stored in the same MongoDB database context as the listing data.
 
 # Reflection and improvements
 
-### Security
+### Future improvements
 The greatest challenge tackled in the project involved security. Designing the frontend or configuring the backend got me constantly questioning *Am I exposing something here?* I attempted to tackled all concerns about data exposure as much as possible through the intergration of things such as JWTs, CORS, etc. Light security tests were performed using [webtools](https://pentest-tools.com/website-vulnerability-scanning/website-scanner) though, those tests are inadequate. I would have spent more time researching on how to properly and fully test the security of my website.
 
-### Testing
+Another point that would need improvement is the implementation of an API gateway. Currently, requests are being handle on a per service basis though middlewares. In the future, an API gateway could be used to not only handle request on a centeral point, but also implement a rate limiter and statistical monitoring.
 
 ### Code
-<p align="center">
-  <img src="https://testbytes.technoallianceindia.com/wp-content/uploads/2019/06/Untitled-8-1.png" width=400 />
-</p>
+Testing is very much present, though not complete. In the future, I would have reduced the amount of testing at the expense of services or at least build upon the services in a TDD format in order to perform much thorough regression testing. Much development time was wasted on fixing errors across services.
 
-### General mindset
+However, throughout the project, I've learned to make the code considerably scalable and testable. DI is something I do naturally now along side implementing the interfaces where it makes the most sense along side polymorphism. 
+
+Another thing I've learned to do that is not obvious but very common among new developers is to trust others code. While I am a firm believer that one should always have authority over ones own code, it should not come at the expense of testing time. A lot of potential points of failure and vulnerabilities can be introduced when writting code on a subject one does not know much on.
+
+Please see [the first version of my user service](https://github.com/rently-io/user-service/tree/V1.0), where I implemented my own version of object relational mapping very prone to injection for instance.
 
 # Works cited
 
