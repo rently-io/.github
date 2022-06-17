@@ -181,6 +181,8 @@ This strategy is replicated across all repositories.
 
 An exemple of CI and CD actions from the User Service can be found [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/ci.yml) and [here](https://github.com/rently-io/user-service/blob/V2.0-latest/.github/workflows/cd.yml) respectively.
 
+> ⚠️ Note that some services have externalized configurations, requiring a `CREDENTIALS=[username]:[password]` variable to connect their database. Running docker containers as is may throw a connection error otherwise.
+
 ### Testing
 |Test|Description|Example| 
 |---:|---|---| 
