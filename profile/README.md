@@ -185,9 +185,11 @@ An exemple of CI and CD actions from the User Service can be found [here](https:
 |Test|Description|Example| 
 |---:|---|---| 
 | **Unit** | Ensures that multiple aspect of the endpoint work properly within the scope of the endpoint itself, on a *local* level | <ul><li>Correct data gets yield from a request</li><li>No *`null`* values are returned when an empty *`string`* was expected</li></ul> |
-| **Integration** | Like the name suggests, integration testing is used to make sure *multiple endpoints* work/interact with one another correctly | <ul><li>`200`/`401`/`400`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
+| **Integration** | *Bigbag integration was used as the services are relatively small in size.* Making sure service endpoints are working as desired, with expected return structure for exemple. | <ul><li>`200`/`401`/`400`/etc... reponses are returned when making a request</li><li>Errors are handled correctly, including internal errors (e.i. `Server 500`)</li></ul>
 | **E2E**| Some amount of E2E testing has been made on the frontend using Cypress. See reflection for more information. | <ul><li>Testing whether links redirect to proper page or form submission has proper input validation. </li></ul>
 | **Regression**| When tests fail, I can address the failures and adjust my code for it to work properly, configure new test cases when and prioritize | <ul><li>Reformatting JSON response data can cause certain tests to fail</li></ul>
+
+While some unit testing was done thoroughly, I would have favored E2E testing at the expense of unit testing. As mentioned earlier, the service are relatively small and therefore integration testing is sufficient. Having testing individual functions through unit testing is redundant at this scale.
 
 # Error management
 There are always errors that occur on deployed stuff, even after testing. Any unhandled exception that occur on an service are automatically mailed to a list of first responders and pushed to a Bugsnag dashboard for production level error monitoring. 
