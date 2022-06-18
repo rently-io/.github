@@ -104,13 +104,10 @@ The site is also equiped with an extensive search engine able to perform simple 
   <h3>Reflection and improvements</h3>
   <ul>
     <li>
-      <a href="#frontend">Security </a>
+      <a href="#future-improvements">Future Improvements</a>
     </li>
     <li>
-      <a href="#user-service">Code</a>
-    </li>
-    <li>
-      <a href="#user-service">General mindset</a>
+      <a href="#code">Code</a>
     </li>
   </ul>
   
